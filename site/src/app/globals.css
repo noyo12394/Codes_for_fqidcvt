@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf7;
+  --foreground: #111111;
+  --muted: #5f625d;
+  --line: #e8e6df;
+  --panel: #ffffff;
+  --soft: #f2f1eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #11110f;
+    --foreground: #f4f2eb;
+    --muted: #b7b3a8;
+    --line: #2d2b27;
+    --panel: #171714;
+    --soft: #1f1e1a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #cfe3f8;
+}
+
+.prose-research p {
+  margin-top: 1rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.fade-in {
+  animation: fade-in 420ms ease-out both;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

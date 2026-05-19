@@ -1,0 +1,10 @@
+,N=50,N=500
+Nsim,"5,000","50,000"
+Npsim,"50,000","500,000"
+Lloyd iters,57,58
+Final distortion,9.582e+03,2.137e+04
+Max exceedance error,0.0549,0.0147
+Mean exceedance error,0.0055,0.0014
+Max ACF error,0.0945  (9.445%),0.0240  (2.397%)
+Mean ACF error,0.0170,0.0045
+Time (s),13.2,285.6
