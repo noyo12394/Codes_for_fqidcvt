@@ -1,4 +1,5 @@
 import { CsvTable, Figure } from "@/components/ui";
+import { AlgorithmPlotExplorer } from "@/components/algorithm-plot-explorer";
 
 export default function BenchmarkPage() {
   return (
@@ -39,6 +40,8 @@ export default function BenchmarkPage() {
         <h2 className="text-2xl font-semibold">Stability</h2>
         <CsvTable filename="secapp_table4_cv.csv" />
       </section>
+
+      <AlgorithmPlotExplorer />
 
       <section className="mt-14 rounded-md border border-[var(--line)] bg-[var(--panel)] p-6">
         <h2 className="text-2xl font-semibold">Benchmark Conclusion</h2>
