@@ -2,6 +2,9 @@ import fs from "node:fs";
 import path from "node:path";
 
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+export const fqGithubUrl =
+  "https://github.com/noyo12394/Functional_Quantization_of_infinitedimensional_vernoi_tasslelations-";
+export const siteGithubUrl = "https://github.com/noyo12394/Codes_for_fqidcvt";
 
 export function assetPath(src: string) {
   if (!src.startsWith("/")) return src;

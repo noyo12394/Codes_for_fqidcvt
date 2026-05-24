@@ -1,15 +1,37 @@
 import { CsvTable, Figure } from "@/components/ui";
 import { AlgorithmPlotExplorer } from "@/components/algorithm-plot-explorer";
+import { fqGithubUrl, siteGithubUrl } from "@/lib/content";
 
 export default function BenchmarkPage() {
   return (
     <div className="fade-in mx-auto max-w-6xl px-5 py-14">
-      <p className="font-mono text-sm text-[#378ADD]">secapp_updated.ipynb</p>
-      <h1 className="mt-3 text-4xl font-semibold">The Numbers</h1>
-      <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--muted)]">
-        This page renders notebook-generated figures and CSVs only. Missing
-        assets are shown as pending states so the site never invents a result.
-      </p>
+      <section className="grid gap-8 border-b border-[var(--line)] pb-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+        <div>
+          <p className="font-mono text-sm text-[#378ADD]">secapp_updated.ipynb</p>
+          <h1 className="mt-3 text-4xl font-semibold tracking-normal sm:text-5xl">Benchmark dashboard</h1>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--muted)]">
+            Notebook-generated figures, CSV summaries, and per-method plots in
+            one inspectable view. The interface links directly to the GitHub
+            source so the numbers and implementation stay traceable.
+          </p>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+          <a
+            href={fqGithubUrl}
+            className="rounded-lg border border-[var(--line)] bg-[var(--panel)] p-4 shadow-sm transition hover:border-[#378ADD] hover:shadow-md"
+          >
+            <p className="font-mono text-xs uppercase text-[var(--muted)]">Research code</p>
+            <p className="mt-2 font-semibold text-[#185FA5]">Open FQ GitHub repo</p>
+          </a>
+          <a
+            href={siteGithubUrl}
+            className="rounded-lg border border-[var(--line)] bg-[var(--panel)] p-4 shadow-sm transition hover:border-[#378ADD] hover:shadow-md"
+          >
+            <p className="font-mono text-xs uppercase text-[var(--muted)]">Site source</p>
+            <p className="mt-2 font-semibold text-[#185FA5]">Open frontend repo</p>
+          </a>
+        </div>
+      </section>
 
       <section className="mt-10 grid gap-4 md:grid-cols-3">
         {[

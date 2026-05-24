@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { assetPath, hasPublicFile, readCsv } from "@/lib/content";
+import { assetPath, fqGithubUrl, hasPublicFile, readCsv } from "@/lib/content";
 
 export function Header() {
   const items = [
@@ -16,12 +16,18 @@ export function Header() {
         <Link href="/" className="font-mono text-sm tracking-wide text-[var(--muted)]">
           FQ-IDCVT
         </Link>
-        <div className="flex flex-wrap justify-end gap-4 text-sm">
+        <div className="flex flex-wrap items-center justify-end gap-4 text-sm">
           {items.map(([href, label]) => (
             <Link key={href} href={href} className="text-[var(--muted)] hover:text-[var(--foreground)]">
               {label}
             </Link>
           ))}
+          <a
+            href={fqGithubUrl}
+            className="inline-flex min-h-9 items-center rounded-full border border-[var(--line)] bg-[var(--panel)] px-3 font-medium text-[var(--foreground)] shadow-sm transition hover:border-[#378ADD] hover:text-[#185FA5]"
+          >
+            GitHub
+          </a>
         </div>
       </nav>
     </header>
